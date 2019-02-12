@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1549964715144" clover="3.2.0">
+  <project timestamp="1549964715144" name="All files">
+    <metrics statements="18" coveredstatements="18" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4" elements="27" coveredelements="27" complexity="0" loc="18" ncloc="18" packages="1" files="2" classes="2"/>
+    <file name="createFactorPairs.js" path="C:\Coding\palindrome-challenge\createFactorPairs.js">
+      <metrics statements="10" coveredstatements="10" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <line num="3" count="21" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
+      <line num="10" count="116" type="stmt"/>
+      <line num="12" count="5016" type="stmt"/>
+      <line num="13" count="5016" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="225" type="stmt"/>
+      <line num="23" count="1354" type="stmt"/>
+      <line num="26" count="4" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+    </file>
+    <file name="isThisAPalindrome.js" path="C:\Coding\palindrome-challenge\isThisAPalindrome.js">
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="3" count="5003" type="stmt"/>
+      <line num="6" count="5003" type="stmt"/>
+      <line num="8" count="5003" type="stmt"/>
+      <line num="10" count="5257" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="4795" type="stmt"/>
+      <line num="13" count="462" type="stmt"/>
+      <line num="16" count="208" type="stmt"/>
+      <line num="21" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>

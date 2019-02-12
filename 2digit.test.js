@@ -4,7 +4,7 @@ const cfp = require('./createFactorPairs')
 test("check progamme gets correct answer for largest palindrome of 1 digit numbers", ()=> {
     const startingValue = 9
     const palindromePairs = cfp(startingValue, itap)
-    expect(palindromePairs[0].product).toEqual({f1:9, f2:1, product:9})
+    expect(palindromePairs[0].product).toEqual(9)
 })
 
 test("check progamme gets correct answer for largest palindrome of 2 digit numbers", ()=> {
