@@ -1,0 +1,13 @@
+{
+  "name": "palindrome-challenge",
+  "version": "1.0.0",
+  "description": "Find the largest panindromic number that is the product of two three digit numbers",
+  "main": "index.js",
+  "repository": "https://github.com/CliffRobinson/palindrome-challenge.git",
+  "author": "CliffRobinson <Clifford.F.Robinson@gmail.com>",
+  "license": "none",
+  "private": false,
+  "dependencies": {
+    "jest": "^24.1.0"
+  }
+}
