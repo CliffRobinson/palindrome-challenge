@@ -1,12 +1,16 @@
+/*
+A palindrome number reads same both ways, example 91019, 112211. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 x 99. Find the largest palindrome number made from the product of two 3-digit numbers.
+*/
+
 function isThisAPalindrome(input) {
-    const inputArray = input.toString().split(""); 
+    const charArray = input.toString().split(""); 
     //Treat the input as a string, and store each character in an array.  
     
-    var last = inputArray.length -1
+    var last = charArray.length -1
 
     for (var first = 0; first < last; first++) {
-        //console.log(`Comparing index ${first} to index ${last}.\n${inputArray[first]} != ${inputArray[last]}? ${inputArray[first] != inputArray[last]}`)
-        if (inputArray[first] != inputArray[last]) {
+        //console.log(`Comparing index ${first} to index ${last}.\n${charArray[first]} != ${charArray[last]}? ${charArray[first] != charArray[last]}`)
+        if (charArray[first] != charArray[last]) {
             return false
         }
         last--;
@@ -39,16 +43,24 @@ function createFactorPairs(startingValue, filterfunction = defaultFilter) {
             }
         }
     }
-    outputArray.sort((pair1,pair2) => (pair2.product - pair1.product)) 
-    //The sort is in the reverse of the usual order because we want to sort from largest to smallest. 
+    outputArray.sort(
+        (pair1,pair2) => {
+                const productDiff = (pair2.product - pair1.product)
+                return ((productDiff) != 0) 
+                    ? productDiff
+                    : (pair2.f1 - pair1.f1)
+        })
+    //This sorts by size of product, and if products are the same, use size of the first factor as a tie-breaker. 
+    //The sort is in the reverse of the usual order because we want to sort from largest to smallest.
 
     return outputArray
 }
 
-const startingValue = 99
+const startingValue = 999
 
 const palindromePairs = createFactorPairs(startingValue, isThisAPalindrome)
 
 const bp = palindromePairs[0] //bp == biggest palindrome
 
 console.log(`The biggest palindromic number is ${bp.product}, which is ${bp.f1}*${bp.f2}`)
+

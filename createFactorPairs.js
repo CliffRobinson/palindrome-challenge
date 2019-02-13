@@ -20,8 +20,15 @@ function createFactorPairs(startingValue, filterfunction = defaultFilter) {
             }
         }
     }
-    outputArray.sort((pair1,pair2) => (pair2.product - pair1.product)) 
-    //The sort is in the reverse of the usual order because we want to sort from largest to smallest. 
+    outputArray.sort(
+        (pair1,pair2) => {
+                const productDiff = (pair2.product - pair1.product)
+                return ((productDiff) != 0) 
+                    ? productDiff
+                    : (pair2.f1 - pair1.f1)
+        })
+    //This sorts by size of product, and if products are the same, use size of the first factor as a tie-breaker. 
+    //The sort is in the reverse of the usual order because we want to sort from largest to smallest.
 
     return outputArray
 }
