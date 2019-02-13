@@ -62,5 +62,5 @@ const palindromePairs = createFactorPairs(startingValue, isThisAPalindrome)
 
 const bp = palindromePairs[0] //bp == biggest palindrome
 
-console.log(`The biggest palindromic number is ${bp.product}, which is ${bp.f1}*${bp.f2}`)
+console.log(`Given two factors which are <= ${startingValue}, the biggest palindromic number is ${bp.product}, which is ${bp.f1}*${bp.f2}`)
 

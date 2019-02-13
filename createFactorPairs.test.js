@@ -1,7 +1,7 @@
-const cfp = require('./createFactorPairs')
+const createFactorPairs = require('./createFactorPairs')
 
 test("create factor pairs where max value is 3", ()=> {
-    const testArray = cfp(3)
+    const testArray = createFactorPairs(3)
     expect(testArray).toEqual([
         {f1:3, f2:3, product:9},
         {f1:3, f2:2, product:6},
@@ -13,7 +13,7 @@ test("create factor pairs where max value is 3", ()=> {
 })
 
 test("create factor pairs where max value is 5", ()=> {
-    const testArray = cfp(5)
+    const testArray = createFactorPairs(5)
 
     expect(testArray[0]).toEqual({f1:5, f2:5, product:25})
     expect(testArray[1]).toEqual({f1:5, f2:4, product:20})
